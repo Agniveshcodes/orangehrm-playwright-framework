@@ -39,6 +39,7 @@ test("user can add and search employee", async ({ page }) => {
   await pimPage.navigateToEmployeeList();
 
   await pimPage.searchEmployee(employeeData.firstName);
+  
   await pimPage.verifyEmployeeInResults(employeeData.firstName);
 
   await pimPage.deleteEmployee();
